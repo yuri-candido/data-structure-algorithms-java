@@ -7,11 +7,10 @@ public class Class02 {
 
     public static void main(String[] args) {
 
-        Vector vetor = new Vector(2);
+        Vector vector = new Vector(2);
 
-        vetor.add("element 1");
-        vetor.add("element 2");
-        vetor.add("element 3");
-
+        vector.add("element 1");
+        vector.add("element 2");
+        vector.add("element 3");
     }
 }
