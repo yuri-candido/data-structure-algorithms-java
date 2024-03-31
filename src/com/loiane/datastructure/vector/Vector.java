@@ -46,6 +46,13 @@ public class Vector {
         return this.size;
     }
 
+    public String search(int position){
+        if (!(position>=0 && position < size)) {
+            throw new IllegalArgumentException("invalid position!");
+        }
+        return this.elements[position];
+    }
+
     @Override
     public String toString() {
 
