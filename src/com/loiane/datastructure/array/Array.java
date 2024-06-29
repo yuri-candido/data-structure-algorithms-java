@@ -7,34 +7,14 @@ public class Vector {
     private String[] elements;
     private int size;
 
-    public Vector(int capacity){
+    public Vector(int capacity) {
         this.elements = new String[capacity];
         this.size = 0;
     }
 
-	/*public void add(String element){
-		for (int i=0; i<this.elements.length; i++){
-			if (this.elements[i] == null){
-				this.elements[i] = element;
-				break;
-			}
-		}
-	}*/
-
-	/*public void add(String elements) throws Exception{
-
-		if (this.size < this.elements.length){
-			this.elements[this.size] = element;
-			this.size++;
-		} else {
-			throw new Exception("Vector is already full, it is not possible to add more elements");
-		}
-
-	}*/
-
     public boolean add(String element) {
 
-        if (this.size < this.elements.length){
+        if (this.size < this.elements.length) {
             this.elements[this.size] = element;
             this.size++;
             return true;
@@ -46,11 +26,20 @@ public class Vector {
         return this.size;
     }
 
-    public String search(int position){
+    public String search(int position) {
         if (!(position>=0 && position < size)) {
             throw new IllegalArgumentException("invalid position!");
         }
         return this.elements[position];
+    }
+
+    public int search(String element) {
+       for(int i=0; i<size; i++) {
+           if(elements[i].equals(element)) {
+               return i;
+           }
+       }
+       return -1;
     }
 
     @Override
@@ -60,7 +49,6 @@ public class Vector {
         s.append("[");
 
         for (int i=0; i<this.size-1; i++) {
-
             s.append(this.elements[i]);
             s.append(", ");
         }
@@ -70,9 +58,6 @@ public class Vector {
         }
 
         s.append("]");
-
         return Arrays.toString(elements);
-
     }
-
 }
