@@ -1,16 +1,15 @@
-package com.loiane.datastructure.vector.test;
-import com.loiane.datastructure.vector.Vector;
+package com.loiane.datastructure.array.test;
 
-import java.util.Arrays;
+import com.loiane.datastructure.array.Array;
 
 public class Class02 {
 
     public static void main(String[] args) {
 
-        Vector vector = new Vector(2);
+        Array array = new Array(2);
 
-        vector.add("element 1");
-        vector.add("element 2");
-        vector.add("element 3");
+        array.add("element 1");
+        array.add("element 2");
+        array.add("element 3");
     }
 }

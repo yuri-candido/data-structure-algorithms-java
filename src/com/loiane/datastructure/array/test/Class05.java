@@ -1,17 +1,19 @@
-package com.loiane.datastructure.vector.test;
+package com.loiane.datastructure.array.test;
 
-import com.loiane.datastructure.vector.Vector;
+import com.loiane.datastructure.array.Array;
 
 public class Class05 {
+
     public static void main(String[] args) {
 
-        Vector vector = new Vector(8);
+       Array array = new Array(8);
 
-        vector.add("element 1");
-        vector.add("element 2");
-        vector.add("element 3");
+        array.add("element 1");
+        array.add("element 2");
+        array.add("element 3");
 
-        System.out.println(vector.search(1));
-        System.out.println(vector.search(3));
+        System.out.println(array.search(1));
+        System.out.println(array.search(3));
+
     }
 }

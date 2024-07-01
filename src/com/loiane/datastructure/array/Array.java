@@ -1,19 +1,18 @@
-package com.loiane.datastructure.vector;
+package com.loiane.datastructure.array;
 
 import java.util.Arrays;
 
-public class Vector {
+public class Array {
 
     private String[] elements;
     private int size;
 
-    public Vector(int capacity) {
+    public Array(int capacity) {
         this.elements = new String[capacity];
         this.size = 0;
     }
 
     public boolean add(String element) {
-
         if (this.size < this.elements.length) {
             this.elements[this.size] = element;
             this.size++;
