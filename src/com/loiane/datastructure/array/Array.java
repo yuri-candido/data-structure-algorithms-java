@@ -21,6 +21,7 @@ public class Array {
         return false;
     }
 
+
     public boolean add(int position, String element) {
 
         if (!(position >= 0 && position < size)) {
@@ -36,6 +37,7 @@ public class Array {
 
         return true;
     }
+
 
     public int size() {
         return this.size;
