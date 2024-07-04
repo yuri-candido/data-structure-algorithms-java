@@ -21,6 +21,24 @@ public class Array {
         return false;
     }
 
+
+    public boolean add(int position, String element) {
+
+        if (!(position >= 0 && position < size)) {
+            throw new IllegalArgumentException("invalid position");
+        }
+
+        for (int i=this.size-1; i>=position; i--) {
+            this.elements[i+1] = this.elements[i];
+        }
+
+        this.elements[position] = element;
+        this.size++;
+
+        return true;
+    }
+
+
     public int size() {
         return this.size;
     }
