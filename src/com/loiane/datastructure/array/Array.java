@@ -13,6 +13,7 @@ public class Array {
     }
 
     public boolean add(String element) {
+        this.increasesCapacity();
         if (this.size < this.elements.length) {
             this.elements[this.size] = element;
             this.size++;
@@ -21,13 +22,14 @@ public class Array {
         return false;
     }
 
-
     public boolean add(int position, String element) {
 
         if (!(position >= 0 && position < size)) {
             throw new IllegalArgumentException("invalid position");
         }
 
+        this.increasesCapacity();
+      
         for (int i=this.size-1; i>=position; i--) {
             this.elements[i+1] = this.elements[i];
         }
@@ -37,8 +39,16 @@ public class Array {
 
         return true;
     }
-
-
+  
+    private void increasesCapacity() {
+        if (this.size == this.elements.length) {
+            String[] newElements = new String[this.elements.length * 2];
+            for (int i=0; i<this.elements.length; i++) {
+                newElements[i] = this.elements[i];
+            }
+            this.elements = newElements;
+        }
+      
     public int size() {
         return this.size;
     }
@@ -57,6 +67,10 @@ public class Array {
            }
        }
        return -1;
+    }
+
+    public int size() {
+        return this.size;
     }
 
     @Override
