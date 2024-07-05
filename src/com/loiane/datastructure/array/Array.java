@@ -29,7 +29,7 @@ public class Array {
         }
 
         this.increasesCapacity();
-
+      
         for (int i=this.size-1; i>=position; i--) {
             this.elements[i+1] = this.elements[i];
         }
@@ -39,7 +39,7 @@ public class Array {
 
         return true;
     }
-
+  
     private void increasesCapacity() {
         if (this.size == this.elements.length) {
             String[] newElements = new String[this.elements.length * 2];
@@ -48,6 +48,9 @@ public class Array {
             }
             this.elements = newElements;
         }
+      
+    public int size() {
+        return this.size;
     }
 
     public String search(int position) {
